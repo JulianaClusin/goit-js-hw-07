@@ -3,3 +3,13 @@
 
 // <input type="text" placeholder="Ваше имя?" id="name-input" />
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+
+
+const input = document.querySelector("#name-input");
+const output = document.querySelector("#name-output")
+
+const greeting = (event) => {
+    output.textContent = input.value === "" ? "незнакомец" : event.currentTarget.value;
+}
+
+input.addEventListener("input", greeting);

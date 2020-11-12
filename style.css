@@ -1,0 +1,30 @@
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #gallery li {
+    list-style: none;
+  }
+  
+  #gallery img {
+    height: 300px;
+  }
+  
+  /* task 06 */
+ #validation-input {
+     border: 3px solid #bdbdbd;
+    }
+    
+     #validation-input.valid {
+     border-color: #4caf50;
+    }
+    
+    #validation-input.invalid {
+     border-color: #f44336;
+     }
+   
+    
