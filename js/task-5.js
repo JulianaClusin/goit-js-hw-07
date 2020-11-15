@@ -5,11 +5,19 @@
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
 
 
-const input = document.querySelector("#name-input");
-const output = document.querySelector("#name-output")
+// const input = document.querySelector("#name-input");
+// const output = document.querySelector("#name-output")
 
-const greeting = (event) => {
-    output.textContent = input.value === "" ? "незнакомец" : event.currentTarget.value;
-}
+// const greeting = (event) => {
+//     output.textContent = input.value === "" ? "незнакомец" : event.currentTarget.value;
+// }
 
-input.addEventListener("input", greeting);
+// input.addEventListener("input", greeting);
+
+const input = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
+
+input.addEventListener('input', event => {
+    output.textContent =
+    event.target.value === "" ? "незнакомец" : event.target.value;
+});
