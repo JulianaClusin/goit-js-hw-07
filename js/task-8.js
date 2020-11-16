@@ -43,7 +43,7 @@ function createBoxes(amount) {
     div.style.background = randomBgColor();
     arr.push(div.outerHTML);
   }
-  input.value = 0;
+  amount = input.value;
   return arr.join("");
 }
 
