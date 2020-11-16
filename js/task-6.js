@@ -22,33 +22,16 @@
 //   border-color: #f44336;
 // }
 
-// const input = document.querySelector("#validation-input");
-
-// const inputBorder = function(event) {
-
-//     input.classList.add('invalid');
-
-//     switch (event.currentTarget.value.length) {
-//         case Number(event.target.dataset.length):
-//             input.classList.replace("invalid", "valid");
-//             break;
-//         case 0:
-//             input.classList.remove("invalid");
-//             break;
-
-//     }
-// }
-// input.addEventListener('input', inputBorder);
-
-const validationInput = document.querySelector("#validation-input");
-const inputLength = validationInput.getAttribute("data-length");
-
-function val() {
-  validationInput.classList.add("invalid");
-  if (validationInput.value.length == inputLength) {
-    validationInput.classList.add("valid");
-    validationInput.classList.remove("invalid");
+const inputValidator = {
+  inputText: document.querySelector("input#validation-input"),
+}
+const checkValidation  = function () {
+  if (inputValidator.inputText.value.length === parseInt(inputValidator.inputText.getAttribute("data-length"))) {
+      inputValidator.inputText.classList.add("valid");
+      inputValidator.inputText.classList.remove("invalid");
+  } else {
+      inputValidator.inputText.classList.add("invalid");
+      inputValidator.inputText.classList.remove("valid");
   }
 }
-
-validationInput.addEventListener("blur", val);
+inputValidator.inputText.addEventListener('blur', () => checkValidation());
