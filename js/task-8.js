@@ -49,7 +49,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   boxes.innerHTML = "";
-  input.value = 0;
+  input.value = "";
 }
 
 input.addEventListener("change", () => {
