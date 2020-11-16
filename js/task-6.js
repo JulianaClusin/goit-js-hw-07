@@ -34,4 +34,10 @@ const checkValidation  = function () {
       inputValidator.inputText.classList.remove("valid");
   }
 }
+const clearInput = () => {
+  inputValidator.inputText.value = "";
+  inputValidator.inputText.classList.remove("valid", "invalid");
+}
+
 inputValidator.inputText.addEventListener('blur', () => checkValidation());
+inputValidator.inputText.addEventListener('click', clearInput);
