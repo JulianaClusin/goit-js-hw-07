@@ -19,5 +19,5 @@ const output = document.querySelector('#name-output');
 
 input.addEventListener('input', event => {
     output.textContent =
-    event.target.value === "" ? "незнакомец" : event.target.value;
+    event.target.value.trim() === "" ? "незнакомец" : event.target.value.trim();
 });
